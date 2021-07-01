@@ -1,3 +1,3 @@
 # revature-java-zs
 
-![[Memory Usage]]
+![Memory Usage](Notes/Memory%20Usage.md)
