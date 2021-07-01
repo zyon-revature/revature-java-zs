@@ -1,1 +1,0 @@
-Primary memory is the central storage unit of a computer system. It holds all data instruction for me currently running programs.
