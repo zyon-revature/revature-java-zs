@@ -8,7 +8,7 @@ public class Converter {
 		
 		Converter c = new Converter();
 		
-		int menuSelection = 1;
+		int menuSelection = 0;
 		
 		Scanner userInput = new Scanner(System.in);
 		
