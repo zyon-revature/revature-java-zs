@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package com.revature.multiarray;
+
+/**
+ * @author zyonsavery
+ *
+ */
+public class MultiDimensionalArrays {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

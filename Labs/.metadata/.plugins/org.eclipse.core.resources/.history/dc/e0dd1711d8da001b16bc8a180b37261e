@@ -1,0 +1,22 @@
+/**
+ * 
+ */
+package com.revature.multiarray;
+
+/**
+ * @author zyonsavery
+ *
+ */
+public class MultiDimensionalArrays {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		int [][][] my3dArray = new int [3][3][3];
+		
+		my3
+		
+	}
+
+}
