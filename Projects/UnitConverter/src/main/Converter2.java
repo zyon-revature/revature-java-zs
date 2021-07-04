@@ -50,7 +50,7 @@ public class Converter2 {
 	}
 	
 	private void USGallonsToIGallons() {
-		System.out.println("Enter the number of US gallons: ");
+		System.out.print("Enter the number of US gallons: ");
 		double USGallons = userInput.nextDouble();
 		double IGallons  = USGallons * 0.8326716;
 		System.out.println(USGallons + " US gallons equals " + IGallons + " Imperial gallons.\n");
@@ -59,7 +59,7 @@ public class Converter2 {
 
 	private void milesToKilometer() {
 		
-		System.out.println("Enter the number of miles: ");
+		System.out.print("Enter the number of miles: ");
 		double miles = userInput.nextDouble();
 		
 		double kilometer  = miles * 1.609344;
@@ -82,7 +82,7 @@ public class Converter2 {
 	}
 	
 	private void  cupsToTeaspoons() {
-		System.out.println("Enter the number of cups: ");
+		System.out.print("Enter the number of cups: ");
 		double cups = userInput.nextDouble();
 		
 		double teaspoons  = cups * 48;
