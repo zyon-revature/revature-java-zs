@@ -8,7 +8,7 @@ public class Converter3 {
 	public static void main(String[] args) {
 		Converter3 c = new Converter3();
 		
-		int menuSelection = 0;
+		int menuSelection;
 		
 		do {
 			
@@ -28,7 +28,7 @@ public class Converter3 {
 				}
 				case 3:{
 					//Temperature
-					//c.USGallonsToIGallons();
+					c.temperatureMenu();
 					break;
 				}
 				case 4:{
@@ -49,8 +49,8 @@ public class Converter3 {
 	}
 	
 	
-	//menus
-	private int unitMenuPrompt() {
+	//menus ======================================================================================
+	public int unitMenuPrompt() {
 		String[] promptMsg =  {"Please select an option:",
 				"1. Volume",
 				"2. Distance",
@@ -65,14 +65,14 @@ public class Converter3 {
 		return userInput.nextInt();
 	}
 	
-	private void volumeMenu() {
+	public void volumeMenu() {
 		String[] promptMsg1 =  {"Please select initial unit type:",
 				"1. Cups",
 				"2. Teaspoons",
 				"3. US Gallons",
 				"4. Imperial Gallons"};
 		
-		int selection1 = 0, selection2 = 0, selection3 = 0;
+		int selection1, selection2;
 		
 		do {
 			for(String line: promptMsg1) {
@@ -80,7 +80,7 @@ public class Converter3 {
 			}
 			System.out.print("\nEnter selection: ");
 			selection1 = userInput.nextInt();
-		}while(selection1 > 3 | selection1 < 1);
+		}while(selection1 > 4 | selection1 < 1);
 		
 		String[] promptMsg2 = new String[4];
 		promptMsg2[0]  = "Please select final unit type:";
@@ -124,13 +124,13 @@ public class Converter3 {
 				}while(selection2 > 3 | selection2 < 1);
 		
 				if(selection2 == 1) {
-					teasspoonsToCups();
+					teaspoonsToCups();
 				}
 				else if(selection2 == 2) {
-					teasspoonsToUSGallons();
+					teaspoonsToUSGallons();
 				}
 				else {
-					teasspoonsToIGallons();
+					teaspoonsToIGallons();
 				}	
 				break;
 			case 3:
@@ -180,7 +180,7 @@ public class Converter3 {
 				}	
 				break;
 			default:
-				System.out.println("Invalid slection made.\n");
+				System.out.println("Invalid selection made.\n");
 				volumeMenu();
 				break;
 			
@@ -189,14 +189,14 @@ public class Converter3 {
 		
 	}
 	
-	private void distanceMenu() {
+	public void distanceMenu() {
 		String[] promptMsg1 =  {"Please select initial unit type:",
 				"1. Feet",
 				"2. Miles",
 				"3. Kilometers",
 				"4. Nautical Miles"};
 		
-		int selection1 = 0, selection2 = 0, selection3 = 0;
+		int selection1, selection2;
 		
 		do {
 			for(String line: promptMsg1) {
@@ -204,7 +204,7 @@ public class Converter3 {
 			}
 			System.out.print("\nEnter selection: ");
 			selection1 = userInput.nextInt();
-		}while(selection1 > 3 | selection1 < 1);
+		}while(selection1 > 4 | selection1 < 1);
 		
 		String[] promptMsg2 = new String[4];
 		promptMsg2[0]  = "Please select final unit type:";
@@ -304,8 +304,8 @@ public class Converter3 {
 				}	
 				break;
 			default:
-				System.out.println("Invalid slection made.\n");
-				volumeMenu();
+				System.out.println("Invalid selection made.\n");
+				distanceMenu();
 				break;
 			
 		}
@@ -313,6 +313,93 @@ public class Converter3 {
 		
 	}
 	
+	public void temperatureMenu() {
+		String[] promptMsg1 =  {"Please select initial unit type:",
+				"1. Celsius",
+				"2. Fahrenheit",
+				"3. Kelvin"};
+		
+		int selection1, selection2;
+		
+		do {
+			for(String line: promptMsg1) {
+				System.out.println(line);
+			}
+			System.out.print("\nEnter selection: ");
+			selection1 = userInput.nextInt();
+		}while(selection1 > 3 | selection1 < 1);
+		
+		String[] promptMsg2 = new String[4];
+		promptMsg2[0]  = "Please select final unit type:";
+		
+		switch(selection1) {
+			case 1:
+				promptMsg2[1]  = "1. Fahrenheit";
+				promptMsg2[2]  = "2. Kelvin";
+				
+				do {
+					for(String line: promptMsg2) {
+						System.out.println(line);
+					}
+					System.out.print("\nEnter selection: ");
+					selection2 = userInput.nextInt();
+				}while(selection2 > 2 | selection2 < 1);
+		
+				if(selection2 == 1) {
+					celsiusToFahrenheit();
+				}
+				else {
+					celsiusToKelvin();
+				}	
+				break;
+				
+			case 2:
+				promptMsg2[1]  = "1. Celsius";
+				promptMsg2[2]  = "2. Kelvin";
+				
+				do {
+					for(String line: promptMsg2) {
+						System.out.println(line);
+					}
+					System.out.print("\nEnter selection: ");
+					selection2 = userInput.nextInt();
+				}while(selection2 > 2 | selection2 < 1);
+		
+				if(selection2 == 1) {
+					fahrenheitToCelsius();
+				}
+				else {
+					fahrenheitToKelvin();
+				}	
+				break;
+			case 3:
+				promptMsg2[1]  = "1. Celsius";
+				promptMsg2[2]  = "2. Fahrenheit";
+				
+				do {
+					for(String line: promptMsg2) {
+						System.out.println(line);
+					}
+					System.out.print("\nEnter selection: ");
+					selection2 = userInput.nextInt();
+				}while(selection2 > 2 | selection2 < 1);
+		
+				if(selection2 == 1) {
+					kelvinToCelsius();
+				}
+				else {
+					kelvinToFahrenheit();
+				}	
+				break;
+			default:
+				System.out.println("Invalid selection made.\n");
+				temperatureMenu();
+				break;
+			
+		}
+		
+		
+	}
 	
 	private void menuPrompt() {
 		String[] promptMsg =  {"Please select an option:",
@@ -328,7 +415,7 @@ public class Converter3 {
 		
 	}
 	
-	//Volume Conversion Methods
+	//Volume Conversion Methods ==================================================================
 	//Cups to
 	private void  cupsToTeaspoons() {
 		System.out.print("Enter the number of cups: ");
@@ -355,7 +442,7 @@ public class Converter3 {
 	}
 	
 	//Teaspoons to
-	private void  teasspoonsToCups() {
+	private void  teaspoonsToCups() {
 		System.out.print("Enter the number of teaspoons: ");
 		double teaspoons = userInput.nextDouble();
 		
@@ -363,7 +450,7 @@ public class Converter3 {
 		System.out.println(teaspoons + " teaspoons equals " + cups + " cups.\n");
 	}
 	
-	private void  teasspoonsToUSGallons() {
+	private void teaspoonsToUSGallons() {
 		System.out.print("Enter the number of teaspoons: ");
 		double teaspoons = userInput.nextDouble();
 		
@@ -371,7 +458,7 @@ public class Converter3 {
 		System.out.println(teaspoons + " teaspoons equals " + gallons + " US gallons.\n");
 	}
 	
-	private void  teasspoonsToIGallons() {
+	private void teaspoonsToIGallons() {
 		System.out.print("Enter the number of teaspoons: ");
 		double teaspoons = userInput.nextDouble();
 		
@@ -401,7 +488,7 @@ public class Converter3 {
 		System.out.println(USGallons + " US gallons equals " + IGallons + " Imperial gallons.\n");
 	}
 	
-	//Imperial Gallons to
+	//Imperial Gallons to 
 	private void  IGallonsToCups() {
 		System.out.print("Enter the number of Imperial gallons: ");
 		double gallons = userInput.nextDouble();
@@ -423,8 +510,8 @@ public class Converter3 {
 			System.out.println(IGallons + " Imperial gallons equals " + USGallons + " US gallons.\n");
 	}
 
-	//Distance
-	//miles to
+	//Distance ===================================================================================
+	//miles to 
 	private void  milesToFeet() {
 		System.out.print("Enter the number of miles: ");
 		double miles = userInput.nextDouble();
@@ -442,8 +529,8 @@ public class Converter3 {
 	private void milesToNauticalMiles() {
 			System.out.print("Enter the number of miles: ");
 			double miles = userInput.nextDouble();
-			double nmiles  = miles * 0.8689758;
-			System.out.println(miles + " miles equals " + nmiles + " nautical miles.\n");
+			double nauticalMiles  = miles * 0.8689758;
+			System.out.println(miles + " miles equals " + nauticalMiles + " nautical miles.\n");
 	}
 	
 	//kilometers to
@@ -464,30 +551,30 @@ public class Converter3 {
 	private void kilometersToNauticalMiles() {
 			System.out.print("Enter the number of kilometers: ");
 			double kilometers = userInput.nextDouble();
-			double nmiles  = kilometers * 0.5399565;
-			System.out.println(kilometers + " kilometers equals " + nmiles + " nautical miles.\n");
+			double nauticalMiles  = kilometers * 0.5399565;
+			System.out.println(kilometers + " kilometers equals " + nauticalMiles + " nautical miles.\n");
 	}
 	
 	//nautical mile to
 	private void  nauticalMilesToMiles() {
 		System.out.print("Enter the number of feet: ");
-		double nmiles = userInput.nextDouble();
-		double miles  = nmiles * 1.15078;
-		System.out.println(nmiles + " nautical miles equals " + miles + " miles.\n");
+		double nauticalMiles = userInput.nextDouble();
+		double miles  = nauticalMiles * 1.15078;
+		System.out.println(nauticalMiles + " nautical miles equals " + miles + " miles.\n");
 	}
 	
 	private void  nauticalMilesToKilometers() {
 		System.out.print("Enter the number of feet: ");
-		double nmiles = userInput.nextDouble();
-		double km  = nmiles * 1.852001;
-		System.out.println(nmiles + " nautical miles equals " + km + " kilometers.\n");
+		double nauticalMiles = userInput.nextDouble();
+		double km  = nauticalMiles * 1.852001;
+		System.out.println(nauticalMiles + " nautical miles equals " + km + " kilometers.\n");
 	}
 	
 	private void nauticalMilesToFeet() {
 			System.out.print("Enter the number of feet: ");
-			double nmiles = userInput.nextDouble();
-			double feet  = nmiles * 6076.118 ;
-			System.out.println(nmiles + " nautical miles equals " + feet + " feet.\n");
+			double nauticalMiles = userInput.nextDouble();
+			double feet  = nauticalMiles * 6076.118 ;
+			System.out.println(nauticalMiles + " nautical miles equals " + feet + " feet.\n");
 	}
 	
 	//feet to
@@ -508,13 +595,55 @@ public class Converter3 {
 	private void feetToNauticalMiles() {
 			System.out.print("Enter the number of feet: ");
 			double feet = userInput.nextDouble();
-			double nmiles  = feet * 0.0001645788;
-			System.out.println(feet + " feet equals " + nmiles + " nautical miles.\n");
+			double nauticalMiles  = feet * 0.0001645788;
+			System.out.println(feet + " feet equals " + nauticalMiles + " nautical miles.\n");
 	}
-	//Temperature
+	
+	//Temperature ================================================================================
 
+	//Celsius to
+	private void  celsiusToKelvin() {
+		System.out.print("Enter the temperature in Celsius: ");
+		double celsius = userInput.nextDouble();
+		double kelvin  = celsius + 273.15;
+		System.out.println(celsius + "˚ Celsius equals " + kelvin + " Kelvin.\n");
+	}
+	
+	private void  celsiusToFahrenheit() {
+		System.out.print("Enter the number of Celsius: ");
+		double celsius = userInput.nextDouble();
+		double fahrenheit  = (celsius *1.8) + 32;
+		System.out.println(celsius + "˚ Celsius equals " + fahrenheit + " Fahrenheit.\n");
+	}
 
+	//Fahrenheit to 
+	private void  fahrenheitToKelvin() {
+		System.out.print("Enter the temperature in Fahrenheit: ");
+		double fahrenheit = userInput.nextDouble();
+		double kelvin  = ((fahrenheit-32)/1.8 + 273.15);
+		System.out.println(fahrenheit + "˚ Fahrenheit equals " + kelvin + " Kelvin.\n");
+	}
+	
+	private void  fahrenheitToCelsius() {
+		System.out.print("Enter the number of Fahrenheit: ");
+		double fahrenheit = userInput.nextDouble();
+		double celsius  = (fahrenheit -32) /1.8;
+		System.out.println(fahrenheit + "˚ Fahrenheit equals " + celsius + " Celsius.\n");
+	}
 
-
+	//Kelvin to
+	private void  kelvinToFahrenheit() {
+		System.out.print("Enter the temperature in Kelvin: ");
+		double kelvin = userInput.nextDouble();
+		double fahrenheit  = (kelvin -273.15) *1.8 + 32;
+		System.out.println(kelvin + "˚ Kelvin equals " + fahrenheit + " Fahrenheit.\n");
+	}
+	
+	private void  kelvinToCelsius() {
+		System.out.print("Enter the number of Kelvin: ");
+		double kelvin = userInput.nextDouble();
+		double celsius  = kelvin - 273.15;
+		System.out.println(kelvin + "˚ Kelvin equals " + celsius + " Celsius.\n");
+	}
 
 }
