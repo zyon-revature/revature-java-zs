@@ -1,5 +1,2 @@
-package com.revature;
-
-public class Person {
-	public int age;
+package com.revature;public class Person {
 }

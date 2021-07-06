@@ -1,9 +1,10 @@
 package one;
 
-import com.revature.Person;
-import two.ProtectedSubClass;
 
-public class AcessModifiers {
+import two.ProtectedSubClass;
+import com.revature.Person;
+
+public class AccessModifiers {
 
 	public static void main(String[] args) {
 		//access class methods here
@@ -11,8 +12,7 @@ public class AcessModifiers {
 		adam.age = 15;
 		
 		System.out.println(adam.age);
-		
-		
+
 		ProtectedSubClass psc = new ProtectedSubClass();
 		
 		psc.printId();
