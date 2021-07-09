@@ -2,9 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="978f5996-ab7f-48d6-b02a-665b5b9632cf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Labs/Week2/Day6/Lab-AccessModifiers/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Labs/Week2/Day6/Lab-AccessModifiers/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Labs/Week2/Day6/Lab-AccessModifiers/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Labs/Week2/Day6/Lab-AccessModifiers/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Labs/Week2/Day6/Lab-AccessModifiers/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Labs/Week2/Day6/Lab-AccessModifiers/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Labs/Week2/Day6/Lab-AccessModifiers/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Labs/Week2/Day6/Lab-AccessModifiers/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Labs/Week2/Day6/Lab-AccessModifiers/Lab-AccessModifiers.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Labs/Week2/Day6/Lab-AccessModifiers/src/com/revature/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Labs/Week2/Day6/Lab-AccessModifiers/src/one/AccessModifiers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Labs/Week2/Day6/Lab-AccessModifiers/src/one/ProtectedClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Labs/Week2/Day6/Lab-AccessModifiers/src/two/ProtectedSubClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Labs/Week2/Day6/Lab-RecursiveAlgorithms/.project" beforeDir="false" afterPath="$PROJECT_DIR$/../../Labs/Week2/Day6/Lab-RecursiveAlgorithms/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Labs/Week2/Day6/Lab-RecursiveAlgorithms/src/recursion/ExampleOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Labs/Week2/Day6/Lab-RecursiveAlgorithms/src/recursion/ExampleOne.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Converter3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Converter3.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +39,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -48,7 +62,8 @@
       <workItem from="1625417033707" duration="670000" />
       <workItem from="1625450361826" duration="6000" />
       <workItem from="1625450484995" duration="2239000" />
-      <workItem from="1625542535817" duration="2199000" />
+      <workItem from="1625542535817" duration="2962000" />
+      <workItem from="1625549933013" duration="11000" />
     </task>
     <servers />
   </component>
