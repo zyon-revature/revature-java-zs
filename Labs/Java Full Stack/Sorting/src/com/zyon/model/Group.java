@@ -100,29 +100,27 @@ public class Group {
 	}
 
 	// User input
-//	public Group createGroup() {
-//		Group newGroup = new Group();
-//		Scanner sc = new Scanner(System.in);
-//		// Add name
-//		addGroupPrompt();
-//		String groupName;
-//		groupName = sc.nextLine();
-//		
-//		//Get memberCount
-//		int memberCount;
-//		System.out.print("Enter count for members: ");
-//		memberCount = sc.nextInt();
-//		
-//		Ar
-//		for(int i = 0; i < memberCount;i++) {
-//			newGroup.group.add(new Member().createMember(sc));
-//		}
-//		sc.close();
-//		newGroup.setAverageScore();
-//		
-//		return newGroup;
-//
-//	}
+	public Group createGroup(Scanner sc) {
+		// Add name
+		addGroupPrompt();
+		String groupName;
+		groupName = sc.nextLine();
+		
+		//Get memberCount
+		int memberCount;
+		System.out.print("Enter count for members: ");
+		memberCount = Integer.parseInt(sc.nextLine());
+		
+		//Member List
+		ArrayList<Member> mList = new ArrayList<Member>();
+		for(int i = 0; i < memberCount;i++) {
+			mList.add(new Member().createMember(sc));
+		}
+		Collections.sort(mList, new SortMemberByScore());
+		
+		return new Group(groupName, mList);
+
+	}
 	
 	public Group createGroup() {
 		Scanner sc = new Scanner(System.in);
